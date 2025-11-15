@@ -1,0 +1,590 @@
+*,
+*::after,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+.d-none{
+  display: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-column{
+  flex-direction: column;
+}
+
+.d-wrap {
+  flex-wrap: wrap;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-content-space-between {
+  justify-content: space-between;
+}
+
+.justify-content-space-around {
+  justify-content: space-around;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.align-itmes-center {
+  align-items: center;
+}
+
+.position-realtive {
+  position: relative;
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+.position-fixed {
+  position: fixed;
+}
+
+.top-0 {
+  top: 0;
+}
+
+.left-0 {
+  left: 0;
+}
+
+.right-0 {
+  right: 0;
+}
+
+.bottom-0 {
+  bottom: 0;
+}
+
+:root {
+  --main-color: #ce1212;
+  --second-color: #d78c23;
+}
+body:not(:has(:target)) .navbar .links ul li a[href="#home"],
+body:has(#home:target) .navbar .links ul li a[href="#home"],
+body:has(#chefs:target) .navbar .links ul li a[href="#chefs"],
+body:has(#gallery:target) .navbar .links ul li a[href="#gallery"],
+body:has(#contact:target) .navbar .links ul li a[href="#contact"] {
+  color: black;
+}
+
+body:not(:has(:target)) .navbar .links ul li a[href="#home"]::after,
+body:has(#home:target) .navbar .links ul li a[href="#home"]::after,
+body:has(#chefs:target) .navbar .links ul li a[href="#chefs"]::after,
+body:has(#gallery:target) .navbar .links ul li a[href="#gallery"]::after,
+body:has(#contact:target) .navbar .links ul li a[href="#contact"] {
+  width: 100%;
+}
+/* **************************************** DarkMode Start  ******************************************************** */
+body:has(input[name="mode"]:checked) .sunicon{
+  display: block;
+}
+
+body:has(input[name="mode"]:checked) .navbar{
+  background-color: #171717;
+}
+
+body:has(input[name="mode"]:checked) .navbar .logo {
+  color: #FFF;
+}
+
+body:has(input[name="mode"]:checked) .navbar .dot::after {
+  background-color:#D78C23 ;
+}
+
+body:has(input[name="mode"]:checked) .navbar .links ul li a{
+  color: #FFF;
+}
+
+body:has(input[name="mode"]:checked) .navbar .links ul li a::after{
+  background-color: #D78C23;
+}
+
+body:has(input[name="mode"]:checked) .header{
+  background-color: rgb(37, 37, 37);
+}
+
+body:has(input[name="mode"]:checked) .header .header-content h2{
+  color: #FFF;
+}
+
+body:has(input[name="mode"]:checked) .header .header-btn button{
+  background-color: #D78C23;
+}
+body:has(input[name="mode"]:checked) .header .header-btn button:hover{
+  background-color: #e0942a;
+}
+
+body:has(input[name="mode"]:checked) .header .header-content a {
+  color: white;
+}
+body:has(input[name="mode"]:checked) .header .header-content a:hover{
+  color: #d78c23;
+}
+
+body:has(input[name="mode"]:checked) .header .header-content a .circle {
+  background: #D78C23;
+  background: linear-gradient(
+    90deg,
+    rgba(215, 140, 35, 1)50%,
+    rgba(37, 37, 37, 1) 50%
+  );
+}
+body:has(input[name="mode"]:checked) .header .header-content a .circle .inner-circle {
+  background-color: #000;
+}
+
+
+body:has(input[name="mode"]:checked) .chefs{
+  background-color: #202020;
+}
+body:has(input[name="mode"]:checked) .chefs-title p{
+  color: white;
+}
+body:has(input[name="mode"]:checked) .chefs .chefs-cards .card .card-inner{ 
+  background-color: #171717;
+}
+body:has(input[name="mode"]:checked) .chefs-title p span{
+  color: var(--second-color);
+} 
+body:has(input[name="mode"]:checked) .gallery{
+  background-color: #252525;
+}
+body:has(input[name="mode"]:checked) .gallery .gallery-title p{
+  color: #FFF;
+} 
+body:has(input[name="mode"]:checked) .contact{
+  background-color: #272727;
+}
+body:has(input[name="mode"]:checked) .gallery-title{
+  color: #FFF;
+}
+body:has(input[name="mode"]:checked) .contact .contact-title p{
+  color: #FFF;
+}
+body:has(input[name="mode"]:checked) .footer{
+  background-color: #171717;
+}
+
+
+
+
+
+
+/* **************************************** DarkMode End  ******************************************************** */
+
+
+
+/* ******************************************** NavBar Start ******************************************************** */
+.navbar {
+  z-index: 999999;
+  background-color: #fff;
+  padding: 27px 0;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: 700;
+  font-family: "Roboto";
+  color: #212529;
+}
+
+.links ul li {
+  padding: 5px 15px;
+}
+
+.links ul li a {
+  font-size: 17px;
+  font-family: "Roboto";
+  font-weight: 600;
+}
+
+.navbar .container input{
+  display: none;
+}
+
+.moonicon, .sunicon{
+  cursor: pointer;
+  font-size: 20px;
+  margin-right: 7px;
+}
+.sunicon{
+  color: white;
+}
+
+
+.dot {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 7px;
+}
+
+.dot::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--main-color);
+  top: 0;
+  right: 0;
+}
+
+.links ul li a {
+  position: relative;
+}
+
+.links ul li a::after {
+  content: "";
+  width: 0%;
+  height: 3px;
+  position: absolute;
+  background-color: var(--main-color);
+  top: 110%;
+  left: 0;
+  transition: width 0.5s ease-in-out;
+}
+
+.links ul li a:hover::after {
+  width: 100%;
+}
+
+.links ul li a {
+  color: gray;
+  transition: color 0.5s ease-in-out;
+}
+
+
+
+.bars {
+  font-size: 22px;
+  display: none;
+}
+
+
+
+
+
+/* ********************************************NavBar Media Query******************************************************** */
+@media screen and (max-width:1192px){
+  .navbar{
+    padding: 23px 10px;
+  }
+  
+  .links ul li a {
+    display: none;
+  }
+  
+  
+  .links ul li a {
+    position: relative;
+  }
+  
+  .bars {
+    font-size: 22px;
+    display: block;
+  }
+}
+
+@media screen and (max-width:792){
+  .navbar{
+    padding: 20px 0;
+  }
+  
+  .links ul li a {
+    display: none;
+  }
+  
+  
+  .links ul li a {
+    position: relative;
+  }
+  
+  .bars {
+    font-size: 22px;
+    display: block;
+  }
+}
+
+
+/* ********************************************NavBar End******************************************************** */
+
+.gallery-header {
+  padding: 70px 0;
+  background-color: #fafafa;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+.gallery-header h2 {
+  font-size: 45px;
+  font-weight: 700;
+  font-family: "Roboto";
+}
+
+.gallery-header p {
+  font-size: 18px;
+  color: #555;
+  margin-top: 8px;
+}
+
+.gallery {
+  padding: 60px 0;
+}
+
+.gallery-title p {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.gallery-title p span {
+  color: var(--main-color);
+}
+
+.gallery-title h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 32px;
+}
+
+/* -------- Masonry Grid Style -------- */
+.gallery-grid {
+  column-count: 4;
+  column-gap: 25px;
+}
+
+.g-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  break-inside: avoid;
+}
+
+.g-item img {
+  width: 100%;
+  display: block;
+  transition: 0.4s;
+  border-radius: 12px;
+}
+
+.g-item:hover img {
+  transform: scale(1.12);
+}
+
+/* Overlay */
+.g-item .overlay {
+  position: absolute;
+  inset: 0;
+  background-color: #0008;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.g-item:hover .overlay {
+  opacity: 1;
+}
+
+/* Dark Mode */
+body:has(input[name="mode"]:checked) .gallery-header {
+  background-color: #1d1d1d;
+  color: #fff;
+}
+
+body:has(input[name="mode"]:checked) .gallery-header p {
+  color: #ccc;
+}
+
+body:has(input[name="mode"]:checked) .gallery {
+  background-color: #202020;
+}
+
+body:has(input[name="mode"]:checked) .gallery-title p {
+  color: #eee;
+}
+/* ********************************************Footer Start******************************************************** */
+.footer{
+  background-color: #0E0C0D;
+  color: #FFF;
+  padding: 40px 0;
+  box-shadow: 0px -1px 5px #0007;
+}
+.footer .container{
+  gap: 1.25rem;
+}
+.footer .footer-about div img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.footer .footer-about div h2 {
+  color: white;
+  font-weight: 700;
+  font-size: 30px;
+  font-family: "Roboto", 'Sans-serif';
+}
+.footer .footer-about div h2::after{
+  content: '.';
+  color: #CE1212;
+  font-size: 35px;
+}
+.footer .footer-about p{
+  margin: 0.625rem 0;
+  font-weight: 400;
+  color: #FFF;
+  font-family: "Roboto", 'Sans-serif';
+  line-height: 1.4;
+}
+.footer .footer-about h3{
+    text-align: center;
+    padding: 0.625rem;
+    border-bottom: 2px solid #ddd6;
+    margin-bottom: 0.625rem;
+    font-weight: 700;
+    font-size: 18.72px;
+    font-family: 'Inter', 'Sans-serif';
+}
+.footer .footer-about .soical-links{
+  color: #FFF;
+  text-align: center;
+  font-size: 24px;
+  justify-content: center;
+}
+.footer .footer-about .soical-links li {
+  margin: 0 15px;
+}
+.footer .footer-about .soical-links li i{
+  font-size: 24px;
+}
+
+.footer .footer-sub .footer-sub-box h3{
+  margin-bottom: 5px;
+  font-weight: 700;
+  font-size: 18.72px;
+  font-family: 'Inter', 'Sans-serif';
+}
+.footer .footer-sub .footer-sub-box p{
+  font-weight: 400;
+  color: #FFF;
+  font-family: "Roboto", 'Sans-serif';
+  margin: 10px 0;
+  line-height: 1.4;
+}
+.footer .footer-sub .fsub-group{
+  gap: 5px;
+  margin-block: 1.25rem;
+}
+.footer .footer-sub .fsub-group input{
+  flex-grow: 1;
+  padding: 0.625rem;
+}
+.footer .footer-sub .fsub-group button{
+  background-color: #CE1212;
+  color: white;
+  padding: 5px 15px;
+  border: none;
+  transition: 0.5s;
+  font-weight: 500;
+}
+.footer .footer-sub .fsub-group button:hover{
+  background-color: #E51414;
+  cursor: pointer;
+}
+.footer .footer-sub .quick-links h3{
+  margin-bottom: 15px;
+  font-weight: 700;
+  font-size: 18.72px;
+  font-family: 'Inter', 'Sans-serif';
+}
+.footer .footer-sub .quick-links .quick-links-left{
+  padding-right: 160px;
+}
+.footer .footer-sub .quick-links .quick-links-left li,
+.footer .footer-sub .quick-links .quick-links-right li {
+  margin-bottom: 10px;
+}
+
+.footer .footer-sub .quick-links .quick-links-left li a,
+.footer .footer-sub .quick-links .quick-links-right li a{
+  font-size: 16px;
+  font-family: "Inter", 'Sans-serif';
+  font-weight: 300;
+  transition: .5s;
+}
+.footer .footer-sub .quick-links .quick-links-left li a:hover,
+.footer .footer-sub .quick-links .quick-links-right li a:hover{
+  background-color: #222222;
+}
+.footer .footer-sub .quick-links .quick-links-left li a i,
+.footer .footer-sub .quick-links .quick-links-right li a i {
+  margin-right: 5px;
+}
+
+.footer .contact-details h3 {
+  margin-bottom: 15px;
+  font-weight: 700;
+  font-size: 18.72px; 
+  font-family: 'Inter', 'Sans-serif';
+  color: #FFF; 
+}
+
+.footer .contact-details ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+
+.footer .contact-details ul li span {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400; 
+  color: #FFF; 
+}
+
+.footer .contact-details ul li i {
+  color: #CE1212;
+  font-size: 18px; 
+  margin-right: 10px;
+  width: 20px;
+  text-align: center;
+  flex-shrink: 0;
+}
