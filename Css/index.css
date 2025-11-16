@@ -207,8 +207,11 @@ body:has(input[name="mode"]:checked) .footer{
   z-index: 999999;
   background-color: #fff;
   padding: 27px 0;
+  transition: background-color 0.3s ease;
 }
-
+.navbar.scrolled {
+  background-color: orangered;
+}
 .logo {
   font-size: 30px;
   font-weight: 700;
@@ -1181,4 +1184,25 @@ body:has(input[name="mode"]:checked) .footer{
   .footer .footer-about div h2 {
     font-size: 22px;
   }
+}
+
+.to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 15px;
+  font-size: 22px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.to-top.show {
+  opacity: 1;
+  pointer-events: auto;
 }
